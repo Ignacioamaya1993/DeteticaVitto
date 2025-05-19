@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vitto - Dietética Natural</title>
-  <link rel="stylesheet" href="css/global.css" />
-  <link rel="stylesheet" href="css/index.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Productos | Vitto</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/productos.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 <body>
       <header>
         <div class="header-container">            
             <div class="logo">
-                <img src="assets/images/logo.png" alt="Dietetica Vitto Logo">
+                <img src="../assets/images/logo.png" alt="Dietetica Vitto Logo">
             </div>
 
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="../index.html">Inicio</a></li>
                     <li><a href="html/productos.html">Productos</a></li>
                     <li><a href="html/registro.html">Registro</a></li>
                     <li><a href="html/login.html">Login</a></li>
@@ -29,20 +29,16 @@
     </header>
 
   <main>
-  <section class="banner">
-    <!-- Carrusel de imágenes -->
-    <div class="slider">
-      <img src="assets/images/banner1.jpg" class="slide active" alt="Producto 1" />
-      <img src="assets/images/banner2.jpg" class="slide" alt="Producto 2" />
-      <img src="assets/images/banner3.jpg" class="slide" alt="Producto 3" />
-    </div>
-  </section>
+    <h1>Productos</h1>
 
-  <section class="info">
-    <h1>Bienvenidos a Vitto</h1>
-    <p>Tu espacio de alimentación consciente y saludable. Encontrá los mejores productos naturales, orgánicos y sin TACC.</p>
-  </section>
-  
+    <div class="filtros">
+      <input type="text" id="buscador" placeholder="Buscar producto...">
+      <select id="filtro-categoria">
+        <option value="">Todas las categorías</option>
+      </select>
+    </div>
+
+    <div id="lista-productos" class="grid-productos"></div>
   </main>
 
   <footer>
@@ -67,6 +63,6 @@
     </div>
   </footer>
 
-  <script src="javascript/index.js"></script>
+  <script type="module" src="../javascript/productos.js"></script>
 </body>
 </html>
