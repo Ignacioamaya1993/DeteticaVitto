@@ -1,5 +1,8 @@
-firebaseConfig.js
-
-javascript/firebaseConfig.js
-
 /javascript/firebaseConfig.js
+
+/functions/node_modules
+
+/functions/package-lock.json
+/firebase-debug.log
+
+/firebase.rules
