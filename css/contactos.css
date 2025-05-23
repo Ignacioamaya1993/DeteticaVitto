@@ -1,0 +1,43 @@
+.contacto-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.info-contacto {
+  margin-bottom: 2rem;
+}
+
+.item-contacto {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-contacto i {
+  color: #2e7d32;
+  font-size: 1.3rem;
+}
+
+.item-contacto.redes a {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  color: #2e7d32;
+  transition: color 0.3s;
+}
+
+.item-contacto.redes a:hover {
+  color: #1b5e20;
+}
+
+.mapa-ubicacion iframe {
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+  border: none;
+}

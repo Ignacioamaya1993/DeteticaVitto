@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Vitto</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/login.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+  <!-- Header exclusivo para login -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="../assets/images/logo.png" alt="Dietetica Vitto Logo">
+      </div>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="registro.html">Registro</a></li>
+          <li><a href="login.html" id="iniciar-sesion-link">Iniciar Sesión</a></li>
+          <li><a href="mi-cuenta.html" id="mi-cuenta-link">Mi Cuenta</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <div class="login-container">
+      <h2>Iniciar Sesión</h2>
+      <form class="login-form" id="loginForm">
+        <label for="email">Correo electrónico <span style="color: red;">*</span></label>
+        <input type="email" id="email" required placeholder="ejemplo@correo.com" />
+        
+        <label for="password">Contraseña <span style="color: red;">*</span></label>
+        <div class="password-container" style="position: relative; width: 100%;">
+          <input type="password" id="password" placeholder="Ingrese su contraseña" />
+          <span class="toggle-password" onclick="togglePasswordVisibility()">
+            <i class="fas fa-eye-slash"></i>
+          </span>
+        </div>
+
+        <button type="submit">Iniciar Sesión</button>
+        <div id="forgotPassword" class="forgot-password">¿Olvidaste tu contraseña?</div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer dinámico -->
+  <div id="footer-container"></div>
+
+  <!-- Cargar footer desde archivo -->
+  <script>
+    fetch("../html/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-container").innerHTML = data;
+      });
+  </script>
+
+  <!-- Scripts de Firebase y login -->
+  <script type="module" src="../javascript/firebaseConfig.js"></script>
+  <script type="module" src="../javascript/login.js"></script>
+  <script type="module" src="../javascript/auth.js"></script>
+
+</body>
+</html>

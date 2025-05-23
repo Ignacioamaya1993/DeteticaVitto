@@ -1,0 +1,220 @@
+/* Contenedor principal */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px;
+}
+
+/* Contenedor del formulario */
+form {
+    margin-top: 60px;
+    background: #4CAF50;
+    border-radius: 10px; /* Bordes más suaves */
+    box-shadow: 0 8px 20px rgb(248, 247, 247); /* Sombra más ligera */
+    padding: 30px;
+    width: 100%;
+    max-width: 600px; /* Acomoda dos columnas */
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 60px;
+}
+
+form:hover {
+    transform: translateY(-5px); /* Ligera elevación */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* Sombra más intensa */
+}
+
+.required {
+    color: red;
+    font-weight: bold;
+}
+
+/* Título del formulario */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #ffffff; /* Morado moderno */
+    font-weight: bold;
+}
+
+/* Contenedor para las columnas */
+.form-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Cada columna */
+.column {
+    width: 48%;
+}
+
+/* Etiquetas y campos de entrada */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffffff; /* Gris moderno */
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ced4da; /* Borde gris suave */
+    font-size: 1rem;
+    box-sizing: border-box;
+    background-color: #f9f9f9; /* Fondo claro */
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+input:hover, select:hover {
+    transform: scale(1.03); /* Efecto de acercamiento */
+    border-color: #6f42c1;
+    box-shadow: 0 0 8px rgba(111, 66, 193, 0.4);
+}
+
+input:focus, select:focus {
+    outline: none;
+    transform: scale(1.03); /* Persistir efecto al enfocar */
+    border-color: #6f42c1;
+    box-shadow: 0 0 8px rgba(111, 66, 193, 0.5);
+}
+
+/* Estilo para el campo de fecha */
+input[type="date"] {
+    color: #1d3557;
+    background-color: #ffffff;
+    appearance: none; /* Elimina los estilos predeterminados del navegador */
+}
+
+input[type="date"]:hover {
+    transform: scale(1.03);
+}
+
+/* Placeholder personalizado */
+input::placeholder {
+    color: #adb5bd; /* Gris claro */
+    font-style: italic;
+}
+
+/* Botón de envío */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1d3557;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #5a3794; /* Morado más oscuro */
+    transform: scale(1.02); /* Pequeña ampliación */
+}
+
+/* Contenedor principal del modal */
+.swal2-popup {
+    background-color: #333333;
+    border: 1px solid #e0e0e0;
+}
+
+/* Título del modal */
+.swal2-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Mensajes de validación */
+#mensaje {
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#mensaje.success {
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
+#mensaje.error {
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
+/* Clase para ocultar elementos */
+.hidden {
+    display: none;
+}
+
+/* Contenedor de la contraseña */
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 40px; /* Espacio para el icono */
+    transition: transform 0.3s; /* Transición para el efecto de acercamiento */
+}
+
+.password-container input:hover {
+    transform: scale(1.03); /* Efecto de acercamiento */
+}
+
+.password-container .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-87%); /* Centrado vertical */
+    cursor: pointer;
+    font-size: 18px;
+    color: #1d3557;
+    transition: color 0.3s;
+}
+
+.password-container .toggle-password:hover {
+    color: #5a3794;
+}
+
+/* Estilo del contenido */
+.custom-popup {
+    background-color: #ffffff;
+    color: #4CAF50;
+}
+
+/* Título */
+.custom-title {
+    color: #4CAF50;
+}
+
+/* Contenido del mensaje */
+.custom-content {
+    color: rgb(31, 13, 13) !important; /* Asegura que el texto dentro del contenido sea blanco */
+}
+
+
+@media (max-width: 768px) {
+    #routine-list {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    #routine-list {
+        grid-template-columns: 1fr;
+    }
+}

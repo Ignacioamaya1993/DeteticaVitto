@@ -1,0 +1,77 @@
+.cuenta-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+}
+
+.panel-datos,
+.panel-pedidos {
+    margin-bottom: 2rem;
+}
+
+.panel-datos h2,
+.panel-pedidos h2 {
+    margin-bottom: 1rem;
+    color: #2e7d32; /* Verde oscuro */
+}
+
+/* Estilo para los inputs de edición */
+.panel-datos input[type="text"] {
+    width: 100%;
+    padding: 10px 14px;
+    margin: 0.5rem 0 1rem 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.panel-datos input[type="text"]:focus {
+    border-color: #2e7d32;
+    outline: none;
+}
+
+/* Estilo del botón de guardar */
+#guardar-cambios {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#guardar-cambios:hover {
+    background-color: #1b5e20;
+}
+
+.direccion-editable {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.direccion-editable input {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.edit-icon, .cancel-icon {
+    color: #2e7d32;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.edit-icon:hover, .cancel-icon:hover {
+    color: #1b5e20;
+}

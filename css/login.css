@@ -1,0 +1,149 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Ocupa toda la altura de la ventana */
+    padding: 20px;
+}
+
+label span {
+    color: red;
+    font-weight: bold;
+}
+
+.login-container {
+    width: 480px; /* Tamaño fijo para mantener el ancho */
+    padding: 30px;
+    background-color: #4CAF50;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgb(250, 248, 248); /* Sombra refinada */
+    text-align: center;
+}
+
+.login-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.login-form input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #f9f9f9;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.login-form input:hover {
+    transform: scale(1.03); /* Efecto de acercamiento */
+    border-color: #ffffff;
+    box-shadow: 0 0 8px rgba(111, 66, 193, 0.4);
+}
+
+.login-form input:focus {
+    border-color: #6f42c1;
+    box-shadow: 0 0 8px rgba(111, 66, 193, 0.5);
+    outline: none;
+    transform: scale(1.03); /* Persistir efecto al enfocar */
+}
+
+.login-form button {
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #1d3557;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-form button:hover {
+    background-color: #5a3794;
+    transform: scale(1.02);
+}
+
+.login-form .forgot-password {
+    font-size: 0.85rem;
+    color: #f5f6f8;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.login-form .forgot-password:hover {
+    color: #f6f4f8;
+    text-decoration: underline;
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 40px; /* Espacio para el ícono */
+}
+
+/* Estilo del contenido */
+.custom-popup .swal2-input-label {
+    color: #4CAF50 !important;
+}
+
+.custom-popup .swal2-input::placeholder {
+    color: white !important;
+}
+
+/* Título */
+.custom-title {
+    color: white; /* Asegurarse que el título también sea blanco */
+}
+
+/* Contenido del mensaje */
+.custom-content {
+    color: white !important; /* Asegura que el texto dentro del contenido sea blanco */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #1d3557;
+    transition: color 0.3s;
+}
+
+.toggle-password:hover {
+    color: #5a3794;
+}
+
+/* Contenedor principal del modal */
+.swal2-popup {
+    background-color: #ffffff;
+}
+
+/* Título del modal */
+.swal2-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.custom-popup .swal2-content,
+.custom-popup .swal2-html-container,
+.custom-popup .swal2-text {
+    color: #4CAF50;
+}

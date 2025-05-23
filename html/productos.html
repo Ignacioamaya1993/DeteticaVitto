@@ -5,29 +5,26 @@
   <title>Productos | Vitto</title>
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/productos.css">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-      <header>
-        <div class="header-container">            
-            <div class="logo">
-                <img src="../assets/images/logo.png" alt="Dietetica Vitto Logo">
-            </div>
 
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="html/productos.html">Productos</a></li>
-                    <li><a href="html/registro.html">Registro</a></li>
-                    <li><a href="html/login.html">Login</a></li>
-                    <li><a href="html/contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <!-- Header dinámico -->
+  <div id="header-container"></div>
+  <script>
+    fetch("../html/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-container").innerHTML = data;
+        const script = document.createElement("script");
+        script.type = "module";
+        script.src = "../javascript/header.js";
+        document.body.appendChild(script);
+      });
+  </script>
 
+  <!-- Contenido principal -->
   <main>
     <h1>Productos</h1>
 
@@ -41,28 +38,19 @@
     <div id="lista-productos" class="grid-productos"></div>
   </main>
 
-  <footer>
-    <div class="footer-container">
-    <div class="footer-info">
-    <p>&copy; 2025 Vitto - Dietética Natural</p>
-    </div>
-    <div class="footer-social">
-      <a href="https://www.facebook.com/dietetica.vitto" target="_blank" class="social-icon" aria-label="Facebook">
-            <i class="fab fa-facebook"></i>
+  <!-- Footer dinámico -->
+  <div id="footer-container"></div>
+  <script>
+    fetch("../html/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-container").innerHTML = data;
+      });
+  </script>
 
-      <a href="https://www.instagram.com/dieteticavitto_" target="_blank" class="social-icon" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-            
-      <a href="https://wa.me/5492284610165" target="_blank" class="social-icon" aria-label="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-      </a>
-    </div>
-        <div class="footer-design">
-            <p>Design by Ignacio Amaya</p>
-        </div>
-    </div>
-  </footer>
-
+  <!-- Scripts -->
+  <script type="module" src="../javascript/auth.js"></script>
   <script type="module" src="../javascript/productos.js"></script>
+
 </body>
 </html>
